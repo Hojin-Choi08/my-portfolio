@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+/* Self-hosted fonts — only the faces the site uses. Labels use Pretendard (CDN, index.html);
+   Korean display text falls back to Noto Serif KR (Google Fonts, index.html). */
+@font-face {
+  font-family: 'Gambetta';
+  src: url('/fonts/Gambetta-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gambetta';
+  src: url('/fonts/Gambetta-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SUIT';
+  src: url('/fonts/SUIT-Regular.woff2') format('woff2'); /* SIL OFL — see /fonts/SUIT-OFL.txt */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-cream: #f7f1e8;
+  --color-paper: #eadfce;
+  --color-ink: #3e2c22; /* body text — 11.8:1 on cream */
+  --color-espresso: #2b1d15; /* text on color panels — ≥5:1 on hojicha/matcha/latte/coral */
+  --color-muted: #6f5f55; /* meta text — 5.4:1 on cream, 4.6:1 on paper */
+  --color-hojicha: #c97c4c; /* panels, rules and large type only (2.9:1 on cream) */
+  --color-hojicha-ink: #8f4f2c; /* small orange text on cream — 5.6:1 */
+  --color-matcha: #8fa876;
+  --color-matcha-ink: #4f6340; /* success text on cream — 5.9:1 */
+  --color-latte: #e8c77d;
+  --color-coral: #d98e8e;
+  --color-error: #9b3b2e; /* error text on cream — 6.1:1 */
+
+  --font-display: 'Gambetta', 'Noto Serif KR', Georgia, 'Times New Roman', serif;
+  --font-sans: 'SUIT', -apple-system, 'Segoe UI', system-ui, sans-serif; /* SUIT includes Hangul */
+  /* small tracked labels + nav — kept separate so the body font can change independently */
+  --font-label: 'Pretendard', -apple-system, 'Segoe UI', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+  section[id] {
+    scroll-margin-top: 4rem;
+  }
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-latte);
+    color: var(--color-espresso);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* small uppercase tracked sans — labels, meta, nav */
+@utility label {
+  @apply font-label text-[11px] font-medium tracking-[0.2em] uppercase;
+}
+
+/* spaced all-caps serif — name + section titles */
+@utility display {
+  @apply font-display leading-[0.9] font-normal tracking-[0.06em] uppercase;
+}
+
+/* 1px hairline in ink at low opacity */
+@utility hairline {
+  @apply border-ink/20;
+}
+
+/* plain underlined text link */
+@utility text-link {
+  @apply label inline-flex items-center gap-1.5 border-b border-current pb-0.5 transition-opacity hover:opacity-70;
+}
