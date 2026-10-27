@@ -6,7 +6,7 @@ export default function Hero() {
   const { profile, ui } = t;
   return (
     <section id="home" aria-label="Introduction" className="mx-auto max-w-6xl px-6 pt-16 pb-24 sm:pt-24">
-      <p className="label text-muted">{profile.label}</p>
+      <p className="label text-accent">{profile.label}</p>
 
       {/* Mobile: stacked in DOM order (name → photo → intro).
           md+: two columns — name (top) and intro (bottom) on the left, photo spanning both rows on the right,
@@ -14,10 +14,10 @@ export default function Hero() {
       <div className="mt-6 grid md:grid-cols-[1fr_auto] md:grid-rows-[auto_1fr] md:gap-x-12 lg:gap-x-16">
         <div className="md:col-start-1 md:row-start-1">
           <div className="flex items-start gap-4">
-            <h1 className="display w-min text-[clamp(3rem,8vw,7rem)]">
+            <h1 className="display w-min text-[clamp(3rem,8vw,7rem)] text-accent">
               {profile.firstName} {profile.lastName}
             </h1>
-            <span aria-hidden="true" className="label mt-2 shrink-0 text-accent-ink sm:mt-4">
+            <span aria-hidden="true" className="label mt-2 shrink-0 text-accent sm:mt-4">
               {ui.no} 01
             </span>
           </div>

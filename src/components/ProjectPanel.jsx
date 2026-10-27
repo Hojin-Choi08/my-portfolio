@@ -5,10 +5,11 @@ import TechTags from './TechTags.jsx';
 import fitTitle from './fitTitle.js';
 
 const panelColors = {
-  accent: 'bg-accent text-cream', // dark burgundy → light text (8.9:1)
-  rose: 'bg-rose text-espresso',
-  champagne: 'bg-champagne text-espresso',
-  coral: 'bg-coral text-espresso',
+  // text + link-hover colors chosen for AA on each background
+  accent: 'bg-accent text-cream [--link-hover:var(--color-champagne)]', // 8.5:1, hover 5.2:1
+  rose: 'bg-rose text-espresso [--link-hover:var(--color-accent-ink)]', // 8.0:1, hover 5.2:1
+  champagne: 'bg-champagne text-espresso [--link-hover:var(--color-accent-ink)]', // 10.8:1, hover 7.0:1
+  coral: 'bg-coral text-espresso [--link-hover:currentColor]', // 5.7:1; no burgundy hover passes on coral
 };
 
 export default function ProjectPanel({ project, number, onOpenDetails }) {

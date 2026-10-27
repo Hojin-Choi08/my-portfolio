@@ -32,7 +32,7 @@ export default function LanguageToggle() {
             aria-pressed={lang === l.code}
             onClick={() => setLang(l.code)}
             className={`label border-b pb-1 transition-colors ${
-              lang === l.code ? 'border-ink text-ink' : 'border-transparent text-muted hover:text-ink'
+              lang === l.code ? 'border-accent text-ink' : 'border-transparent text-muted hover:text-accent'
             }`}
           >
             <span aria-hidden="true">{l.label}</span>

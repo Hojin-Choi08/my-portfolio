@@ -25,13 +25,13 @@
 }
 
 @theme {
-  --color-cream: #f5f0ec;
-  --color-paper: #e8dcd8;
-  --color-ink: #3b1820; /* body text — 13.9:1 on cream */
-  --color-espresso: #250e15; /* text on light panels — ≥5.6:1 on rose/champagne/coral (NOT on accent) */
-  --color-muted: #6f5a60; /* meta text — 5.6:1 on cream, 4.7:1 on paper */
-  --color-accent: #7b1e34; /* burgundy — panels + accents; use cream text on it (8.9:1) */
-  --color-accent-ink: #5c1526; /* small accent text on cream — 11.7:1 */
+  --color-cream: #faf8f7;
+  --color-paper: #efe6e6;
+  --color-ink: #2a1a1f; /* body text — 15.7:1 on cream */
+  --color-espresso: #1c1014; /* text on light panels — ≥5.7:1 on rose/champagne/coral (NOT on accent) */
+  --color-muted: #76666b; /* meta text — 5.1:1 on cream (4.4:1 on paper: keep muted text off paper) */
+  --color-accent: #8c1c3a; /* burgundy — headings, eyebrows, hovers, panels; 8.5:1 on cream; cream text on it */
+  --color-accent-ink: #6b1229; /* darker burgundy — 11.4:1 on cream */
   --color-rose: #c9a0a6;
   --color-rose-ink: #8a4b57; /* success text on cream — 5.8:1 */
   --color-champagne: #d8c3a5;
@@ -50,6 +50,9 @@
   }
   body {
     @apply bg-cream font-sans text-ink antialiased;
+  }
+  :root {
+    --link-hover: var(--color-accent); /* text-link hover color; project panels override it */
   }
   section[id] {
     scroll-margin-top: 4rem;
@@ -87,5 +90,5 @@
 
 /* plain underlined text link */
 @utility text-link {
-  @apply label inline-flex items-center gap-1.5 border-b border-current pb-0.5 transition-opacity hover:opacity-70;
+  @apply label inline-flex items-center gap-1.5 border-b border-current pb-0.5 transition-colors hover:text-(--link-hover);
 }

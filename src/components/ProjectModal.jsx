@@ -52,8 +52,8 @@ export default function ProjectModal({ project, onClose }) {
         className="max-h-[90svh] w-full max-w-2xl overflow-y-auto rounded-[2px] border hairline bg-cream px-6 py-8 sm:px-10"
       >
         <div className="flex items-center justify-between border-b border-ink pb-3">
-          <p className="label text-muted">{project.kicker}</p>
-          <button ref={closeRef} type="button" onClick={onClose} className="label hover:text-accent-ink">
+          <p className="label text-accent">{project.kicker}</p>
+          <button ref={closeRef} type="button" onClick={onClose} className="label transition-colors hover:text-accent">
             {ui.close} <span aria-hidden="true">×</span>
           </button>
         </div>
@@ -86,15 +86,15 @@ export default function ProjectModal({ project, onClose }) {
 
         <dl className="mt-8">
           <div className="grid gap-2 border-t hairline py-5 sm:grid-cols-[8rem_1fr]">
-            <dt className="label pt-1 text-accent-ink">{ui.problem}</dt>
+            <dt className="label pt-1 text-accent">{ui.problem}</dt>
             <dd className="leading-relaxed">{details.problem}</dd>
           </div>
           <div className="grid gap-2 border-t hairline py-5 sm:grid-cols-[8rem_1fr]">
-            <dt className="label pt-1 text-accent-ink">{ui.role}</dt>
+            <dt className="label pt-1 text-accent">{ui.role}</dt>
             <dd className="leading-relaxed">{details.role}</dd>
           </div>
           <div className="grid gap-2 border-t hairline py-5 sm:grid-cols-[8rem_1fr]">
-            <dt className="label pt-1 text-accent-ink">{ui.features}</dt>
+            <dt className="label pt-1 text-accent">{ui.features}</dt>
             <dd>
               <ul>
                 {details.features.map((feature) => (
@@ -109,7 +109,7 @@ export default function ProjectModal({ project, onClose }) {
             </dd>
           </div>
           <div className="grid gap-2 border-t hairline py-5 sm:grid-cols-[8rem_1fr]">
-            <dt className="label pt-1 text-accent-ink">{ui.builtWith}</dt>
+            <dt className="label pt-1 text-accent">{ui.builtWith}</dt>
             <dd>
               <TechTags tags={project.tags} className="pt-0.5" />
             </dd>

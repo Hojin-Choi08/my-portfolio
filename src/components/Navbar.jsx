@@ -35,8 +35,8 @@ export default function Navbar() {
                 <a
                   href={`#${id}`}
                   aria-current={active === id ? 'true' : undefined}
-                  className={`label border-b pb-1 transition-colors hover:text-accent-ink ${
-                    active === id ? 'border-ink' : 'border-transparent'
+                  className={`label border-b pb-1 transition-colors hover:text-accent ${
+                    active === id ? 'border-accent' : 'border-transparent'
                   }`}
                 >
                   {label}
@@ -71,7 +71,7 @@ export default function Navbar() {
                 href={`#${id}`}
                 onClick={() => setOpen(false)}
                 aria-current={active === id ? 'true' : undefined}
-                className="flex items-baseline justify-between py-4"
+                className="flex items-baseline justify-between py-4 transition-colors hover:text-accent"
               >
                 <span className="display text-3xl">{label}</span>
                 <span className="label text-muted">

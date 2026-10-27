@@ -26,7 +26,7 @@ export default function About() {
 
         {/* Tech stack as a café menu */}
         <div>
-          <p className="label mb-6 text-muted">{about.stackLabel}</p>
+          <p className="label mb-6 text-accent">{about.stackLabel}</p>
           <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
             {about.stack.map(({ group, items }) => (
               <div key={group}>

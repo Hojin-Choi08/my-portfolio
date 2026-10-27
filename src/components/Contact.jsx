@@ -48,7 +48,7 @@ export default function Contact() {
               <span className="label block text-muted">{ui.writeDirectly}</span>
               <a
                 href={`mailto:${profile.email}`}
-                className="mt-2 inline-block font-display text-2xl break-all italic underline decoration-ink/40 underline-offset-4 hover:decoration-ink"
+                className="mt-2 inline-block font-display text-2xl break-all italic underline decoration-ink/40 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
               >
                 {profile.email}
               </a>
@@ -83,7 +83,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="label bg-ink px-8 py-4 text-cream transition-colors hover:bg-espresso disabled:opacity-60"
+              className="label bg-ink px-8 py-4 text-cream transition-colors hover:bg-accent disabled:opacity-60"
             >
               {status === 'sending' ? ui.form.sending : ui.form.send}
             </button>
