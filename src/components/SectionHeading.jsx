@@ -8,7 +8,7 @@ export default function SectionHeading({ id }) {
   const { title, subtitle } = sections[index];
   return (
     <header className="border-t hairline pt-6">
-      <p className="label text-hojicha-ink">
+      <p className="label text-accent-ink">
         {ui.no} {String(index + 1).padStart(2, '0')} <span aria-hidden="true">—</span> {title}
       </p>
       <h2 id={`${id}-title`} className="display mt-6 text-[clamp(3rem,9vw,6.5rem)]">

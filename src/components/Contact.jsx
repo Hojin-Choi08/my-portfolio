@@ -88,7 +88,7 @@ export default function Contact() {
               {status === 'sending' ? ui.form.sending : ui.form.send}
             </button>
             <p role="status" aria-live="polite" className="font-display text-xl italic">
-              {status === 'success' && <span className="text-matcha-ink">{ui.form.success}</span>}
+              {status === 'success' && <span className="text-rose-ink">{ui.form.success}</span>}
               {status === 'error' && <span className="text-error">{ui.form.error}</span>}
             </p>
           </div>

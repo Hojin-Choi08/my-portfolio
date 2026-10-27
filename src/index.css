@@ -25,17 +25,17 @@
 }
 
 @theme {
-  --color-cream: #f7f1e8;
-  --color-paper: #eadfce;
-  --color-ink: #3e2c22; /* body text — 11.8:1 on cream */
-  --color-espresso: #2b1d15; /* text on color panels — ≥5:1 on hojicha/matcha/latte/coral */
-  --color-muted: #6f5f55; /* meta text — 5.4:1 on cream, 4.6:1 on paper */
-  --color-hojicha: #c97c4c; /* panels, rules and large type only (2.9:1 on cream) */
-  --color-hojicha-ink: #8f4f2c; /* small orange text on cream — 5.6:1 */
-  --color-matcha: #8fa876;
-  --color-matcha-ink: #4f6340; /* success text on cream — 5.9:1 */
-  --color-latte: #e8c77d;
-  --color-coral: #d98e8e;
+  --color-cream: #f5f0ec;
+  --color-paper: #e8dcd8;
+  --color-ink: #3b1820; /* body text — 13.9:1 on cream */
+  --color-espresso: #250e15; /* text on light panels — ≥5.6:1 on rose/champagne/coral (NOT on accent) */
+  --color-muted: #6f5a60; /* meta text — 5.6:1 on cream, 4.7:1 on paper */
+  --color-accent: #7b1e34; /* burgundy — panels + accents; use cream text on it (8.9:1) */
+  --color-accent-ink: #5c1526; /* small accent text on cream — 11.7:1 */
+  --color-rose: #c9a0a6;
+  --color-rose-ink: #8a4b57; /* success text on cream — 5.8:1 */
+  --color-champagne: #d8c3a5;
+  --color-coral: #c47a86;
   --color-error: #9b3b2e; /* error text on cream — 6.1:1 */
 
   --font-display: 'Gambetta', 'Noto Serif KR', Georgia, 'Times New Roman', serif;
@@ -59,7 +59,7 @@
     outline-offset: 3px;
   }
   ::selection {
-    background: var(--color-latte);
+    background: var(--color-champagne);
     color: var(--color-espresso);
   }
 }

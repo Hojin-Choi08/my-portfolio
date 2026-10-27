@@ -13,7 +13,7 @@ export default function Skills() {
             key={skill.title}
             className="grid gap-x-10 gap-y-3 border-t hairline py-8 sm:grid-cols-[6rem_1fr] md:grid-cols-[6rem_2fr_3fr] md:items-baseline"
           >
-            <span aria-hidden="true" className="font-display text-5xl text-hojicha-ink">
+            <span aria-hidden="true" className="font-display text-5xl text-accent-ink">
               {String(i + 1).padStart(2, '0')}
             </span>
             <h3 className="display text-3xl sm:text-4xl">{skill.title}</h3>

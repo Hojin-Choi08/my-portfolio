@@ -42,11 +42,11 @@ const sharedStack = {
 };
 
 // logo: small app icon shown next to the title, e.g. '/projects/logos/hojicha.svg'
-// color: panel color — hojicha | matcha | latte | coral
+// color: panel color — accent | rose | champagne | coral
 const sharedProjects = {
   campusshare: {
     id: 'campusshare',
-    color: 'hojicha',
+    color: 'accent',
     image: '/projects/campusshare.jpg',
     logo: '',
     tags: ['Vue 3', 'Azure Functions', 'Python', 'Azure Storage', 'Cloudflare Pages', 'Stripe'],
@@ -55,7 +55,7 @@ const sharedProjects = {
   },
   hojicha: {
     id: 'hojicha',
-    color: 'matcha',
+    color: 'rose',
     image: '/projects/hojicha.jpg',
     logo: '',
     tags: ['Vue', 'Python', 'Azure', 'Cloudflare'],
@@ -64,7 +64,7 @@ const sharedProjects = {
   },
   ttabom: {
     id: 'ttabom',
-    color: 'latte',
+    color: 'champagne',
     image: '/projects/ttabom.jpg',
     logo: '',
     tags: ['Nuxt', 'Tailwind CSS', 'FastAPI', 'Supabase', 'Vercel'],

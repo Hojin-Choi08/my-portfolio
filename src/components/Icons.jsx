@@ -41,4 +41,4 @@ export function MailIcon({ className = 'size-3.5' }) {
     </svg>
   );
 }
-MailIcon.brand = '#C97C4C'; // no brand for email — use the hojicha accent
+MailIcon.brand = 'var(--color-accent)'; // no brand for email — use the site accent

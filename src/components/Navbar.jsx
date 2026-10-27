@@ -35,7 +35,7 @@ export default function Navbar() {
                 <a
                   href={`#${id}`}
                   aria-current={active === id ? 'true' : undefined}
-                  className={`label border-b pb-1 transition-colors hover:text-hojicha-ink ${
+                  className={`label border-b pb-1 transition-colors hover:text-accent-ink ${
                     active === id ? 'border-ink' : 'border-transparent'
                   }`}
                 >

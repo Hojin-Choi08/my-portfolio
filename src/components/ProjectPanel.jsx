@@ -5,10 +5,10 @@ import TechTags from './TechTags.jsx';
 import fitTitle from './fitTitle.js';
 
 const panelColors = {
-  hojicha: 'bg-hojicha',
-  matcha: 'bg-matcha',
-  latte: 'bg-latte',
-  coral: 'bg-coral',
+  accent: 'bg-accent text-cream', // dark burgundy → light text (8.9:1)
+  rose: 'bg-rose text-espresso',
+  champagne: 'bg-champagne text-espresso',
+  coral: 'bg-coral text-espresso',
 };
 
 export default function ProjectPanel({ project, number, onOpenDetails }) {
@@ -21,7 +21,7 @@ export default function ProjectPanel({ project, number, onOpenDetails }) {
     <LazyMotion features={domAnimation}>
       <m.article
         aria-labelledby={`project-${project.id}`}
-        className={`${panelColors[project.color] ?? 'bg-paper'} text-espresso`}
+        className={panelColors[project.color] ?? 'bg-paper text-ink'}
         initial={reduceMotion ? false : { opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.15 }}
@@ -51,7 +51,7 @@ export default function ProjectPanel({ project, number, onOpenDetails }) {
               </h3>
             </div>
             <p className="mt-4 font-display text-2xl italic sm:text-3xl">{project.tagline}</p>
-            <hr className="mt-8 border-espresso/25" />
+            <hr className="mt-8 border-current/25" />
             <p className="mt-6 max-w-lg leading-relaxed">{project.summary}</p>
             <TechTags tags={project.tags} className="mt-6" />
             <div className="mt-auto flex flex-wrap gap-x-8 gap-y-4 pt-10">
@@ -75,7 +75,7 @@ export default function ProjectPanel({ project, number, onOpenDetails }) {
               width="800"
               height="500"
               loading="lazy"
-              className="aspect-[8/5] w-full rounded-[2px] border border-espresso/30 object-cover"
+              className="aspect-[8/5] w-full rounded-[2px] border border-current/30 object-cover"
             />
             <figcaption className="label mt-3">
               {ui.plate} {no}
