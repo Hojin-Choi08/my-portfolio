@@ -25,7 +25,7 @@ const sharedProfile = {
   photo: '/HojinChoiProfilePhoto1.jpg', // path in /public
   email: 'hojin.choi0620@gmail.com',
   // Drop resume.pdf into /public, then set this to '/resume.pdf'.
-  resume: '',
+  resume: '/resume.pdf',
 };
 
 export const links = {
